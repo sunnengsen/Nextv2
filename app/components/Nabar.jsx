@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className="bg-[#014164] h-20">
+    <div className="bg-[#014164] h-20 sticky top-0">
       
       <div className="Desktop text-white flex h-20 justify-between items-center hidden md:flex mr-5 ml-5">
         <div>
