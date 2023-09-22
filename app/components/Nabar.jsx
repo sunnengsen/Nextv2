@@ -2,6 +2,7 @@
 import Drop from './dropdown'
 import Image from 'next/image';
 import Link from 'next/link';
+import Navbar2 from './Navbar2';
 
 
 
@@ -24,6 +25,8 @@ export default function Navbar() {
       <Image src="/logoFE.webp" width={50} height={50}/>
         <Drop/>
       </div>
+      <Navbar2></Navbar2>
+      
       
 
     </div>
