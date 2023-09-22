@@ -8,27 +8,10 @@ import Link from 'next/link';
 
 
 export default function Navbar() {
-  const [isHidden, setIsHidden] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  
   return (
-    <div className="sticky top-0">
-      
-
-    <div className={`bg-[#014164] h-20 ${isHidden ? 'hidden' : ''}`}>
+    <div className="sticky top-0">  
+    <div className={`bg-[#014164] h-20 transition-opacity duration-300 `}>
       
       <div className="Desktop text-white flex h-20 justify-between items-center hidden md:flex mr-5 ml-5">
         <div>
@@ -46,8 +29,9 @@ export default function Navbar() {
         <Drop/>
       </div>
     </div>
-     
-    <div className="bg-gray-500 h-20 flex justify-start items-center p-5 uppercase">
+   
+
+    <div className="bg-gray-500 h-20 flex justify-start items-center p-5 uppercase sticky top-0" >
             <div>
             <Link href="#" className="p-5 text-xl font-semibold  ">Panding</Link>
             <div className="mr-5 ml-5 bg-[#014164] h-1 "></div>
@@ -57,6 +41,7 @@ export default function Navbar() {
             <div className="mr-5 ml-5 bg-[#014164] h-1 "></div>
             </div>
         </div>
+    
     </div>
     
   );

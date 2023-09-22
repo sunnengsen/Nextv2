@@ -3,12 +3,12 @@ function Form2 (){
     return(
         <div className=''>
 
-          <div className="w-full ">
+          <div className="w-full p-2 ">
             <label htmlFor="point" className="block text-white">Point</label>
 
             <ul class="flex justify-between w-full" id="form2">
               <li className='p-0.5'>
-                <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required />
+                <input type="radio" id="hosting-small" name="hosting" value='1' class="hidden peer" required />
                 <label for="hosting-small" class="inline-flex items-center justify-between pt-1 pb-1 pr-1.5 pl-1.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">10</label>
               </li>
               <li className='p-0.5'>
