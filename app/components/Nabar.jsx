@@ -1,14 +1,34 @@
 "use client"
+import { useEffect, useState } from 'react';
 import Drop from './dropdown'
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar2 from './Navbar2';
+
 
 
 
 export default function Navbar() {
+  const [isHidden, setIsHidden] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div className="bg-[#014164] h-20 sticky top-0">
+    <div className="sticky top-0">
+      
+
+    <div className={`bg-[#014164] h-20 ${isHidden ? 'hidden' : ''}`}>
       
       <div className="Desktop text-white flex h-20 justify-between items-center hidden md:flex mr-5 ml-5">
         <div>
@@ -25,10 +45,18 @@ export default function Navbar() {
       <Image src="/logoFE.webp" width={50} height={50}/>
         <Drop/>
       </div>
-      <Navbar2></Navbar2>
-      
-      
-
+    </div>
+     
+    <div className="bg-gray-500 h-20 flex justify-start items-center p-5 uppercase">
+            <div>
+            <Link href="#" className="p-5 text-xl font-semibold  ">Panding</Link>
+            <div className="mr-5 ml-5 bg-[#014164] h-1 "></div>
+            </div>
+            <div>
+            <Link href="#" className="p-5 text-xl font-semibold  ">Completed</Link>
+            <div className="mr-5 ml-5 bg-[#014164] h-1 "></div>
+            </div>
+        </div>
     </div>
     
   );
