@@ -12,7 +12,6 @@ export default function Form() {
         </div>
         </div>
       </form>
-
     </div>
   )
 }
