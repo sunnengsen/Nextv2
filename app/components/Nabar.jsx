@@ -23,8 +23,8 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <div className="sticky top-0">
-      <div className={`bg-[#014164] transition-all duration-300 ${scrolling ? '-translate-y-full' : 'translate-y-0'
+    <div className="sticky top-0 bg-[#014164]">
+      <div className={`bg-[#014164] transition-all ${scrolling ? '-translate-y-full' : 'translate-y-0'
         }  shadow-md z-50`}>
 
         <div className="Desktop text-white flex h-20 justify-between items-center hidden md:flex mr-5 ml-5">
@@ -38,7 +38,7 @@ export default function Navbar() {
             <Link className=" hover:bg-white hover:text-black pr-2 pl-2 pt-5 pb-5 rounded-lg transition ease-in-out delay-50 focus:outline-none focus:ring" href="https://www.google.com">Account</Link>
           </div>
         </div>
-        <div className="Mobile text-white flex h-20 items-center ml-5 justify-between md:hidden transition duration-200">
+        <div className="Mobile text-white flex h-20 items-center ml-5 justify-between md:hidden transition duration-200 z-50">
           <Image src="/logoFE.webp" width={50} height={50} />
           <Drop />
         </div>

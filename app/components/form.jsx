@@ -1,17 +1,19 @@
 "use client"
+import { useState } from "react"
 import Form2 from "./form2"
 export default function Form() {
-  return (
-    <div className='bg-[#014164]'>
-      <form className="">
-        <div>
+  const [isPopupOpen, setPopupOpen] = useState(false);
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
 
-        <div className="w-full  justify-center p-2 lg:pr-52 lg:pl-52 2xl:pr-96 2xl:pl-96">
-          <label htmlFor="name" className=" text-xl text-white text-center flex justify-center">Introduction/ Background/ literature (clear)</label>
-          <Form2/>
-        </div>
-        </div>
-      </form>
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+  return (
+    <div className="flex justify-center">
+     <Form2 isOpen={isPopupOpen} onClose={closePopup}/>
+     <button className="bg-[#014164] w-40 h-20 text-white rounded-xl mt-20 " onClick={openPopup}>Create Form</button>
     </div>
   )
 }

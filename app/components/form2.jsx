@@ -1,56 +1,43 @@
-"use client"
-function Form2 (){
-    return(
-        <div className=''>
+export default function form2({ isOpen, onClose }) {
+  return (
+    <div>
+      <div className={`fixed  inset-3 items-center justify-center shadow-md top-40  md:p-20  ${isOpen ? 'block' : 'hidden'}`}>
+        <div className="bg-[#e07373] w-full rounded shadow-md ">
+          <h2 className="text-xl mb-4 uppercase text-center">Evaluation Form</h2>
+          <div className="">
+            <div>
 
-          <div className="w-full p-2 ">
-            <label htmlFor="point" className="block text-white">Point</label>
+              <label htmlFor="" className="text-gray-600">Project Code:</label>
+              <input type="text" id="projectcode" autocomplete="username" class="block rounded-lg flex-1 border-2 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 border-black" placeholder="Project Code" />
+            </div>
+            <div>
 
-            <ul class="flex justify-between w-full" id="form2">
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small" name="hosting" value='1' class="hidden peer" required />
-                <label for="hosting-small" class="inline-flex items-center justify-between pt-1 pb-1 pr-1.5 pl-1.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">10</label>
-              </li>
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small1" name="hosting" value="hosting-small1" class="hidden peer" required />
-                <label for="hosting-small1" class="inline-flex items-center justify-between w-full pt-1 pb-1 pr-2.5 pl-2.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">9</label>
-              </li>
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small2" name="hosting" value="hosting-small2" class="hidden peer" required />
-                <label for="hosting-small2" class="inline-flex items-center justify-between w-full pt-1 pb-1 pr-2.5 pl-2.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">8</label>
-              </li>
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small3" name="hosting" value="hosting-small3" class="hidden peer" required />
-                <label for="hosting-small3" class="inline-flex items-center justify-between w-full pt-1 pb-1 pr-2.5 pl-2.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">7</label>
-              </li>
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small4" name="hosting" value="hosting-small4" class="hidden peer" required />
-                <label for="hosting-small4" class="inline-flex items-center justify-between w-full pt-1 pb-1 pr-2.5 pl-2.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">6</label>
-              </li>
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small5" name="hosting" value="hosting-small5" class="hidden peer" required />
-                <label for="hosting-small5" class="inline-flex items-center justify-between w-full pt-1 pb-1 pr-2.5 pl-2.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">5</label>
-              </li>
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small6" name="hosting" value="hosting-small6" class="hidden peer" required />
-                <label for="hosting-small6" class="inline-flex items-center justify-between w-full pt-1 pb-1 pr-2.5 pl-2.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">4</label>
-              </li>
-              <li className='p-0.5'>
-                <input type="radio" id="hosting-small7" name="hosting" value="hosting-small7" class="hidden peer" required />
-                <label for="hosting-small7" class="inline-flex items-center justify-between w-full pt-1 pb-1 pr-2.5 pl-2.5 text-gray-500 bg-white border border-gray-200 rounded-full cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">3</label>
-              </li>
-            </ul>
+              <label htmlFor="" className="text-gray-600">Project Code:</label>
+              <input type="text" id="projectcode" autocomplete="username" class="block rounded-lg flex-1 border-2 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 border-black" placeholder="Project Code" />
+            </div>
+
           </div>
-          <div className="w-full p-2">
-            <label htmlFor="message" className="block text-white">Comment:</label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full p-2 border rounded-md"
-              placeholder="Enter your comment"
-            ></textarea>
-          </div>
-          </div>
-    );
+          <form>
+
+
+
+
+
+
+
+
+
+
+            <button
+              type="button"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              onClick={onClose}
+            >
+              Close
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  )
 }
-export default Form2;

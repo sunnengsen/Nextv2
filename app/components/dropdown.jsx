@@ -11,7 +11,7 @@ const DropdownMenu = () => {
     };
   
     return (
-      <div className="inline-block text-left ">
+      <div className="inline-block text-left z-50">
         <div>
           <button
             onClick={toggleDropdown}

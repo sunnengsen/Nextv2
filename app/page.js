@@ -7,13 +7,6 @@ export default function Home() {
     <Mk/>
     <LeftNavbar/>
     <Form/>
-    <Form/>
-    <Form/>
-    <Form/>
-    <Form/>
-
-
-   
     </div>
   )
 }
