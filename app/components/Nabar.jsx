@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className={`bg-[#014164] transition-all ${scrolling ? '-translate-y-full' : 'translate-y-0'
         }  shadow-md z-50`}>
 
-        <div className="Desktop text-white flex h-20 justify-between items-center hidden md:flex mr-5 ml-5">
+        <div className="Desktop text-white h-20 justify-between items-center hidden md:flex mr-5 ml-5">
           <div>
             <Image src="/logoFE.webp" width={50} height={50} />
           </div>
